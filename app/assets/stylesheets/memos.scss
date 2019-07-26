@@ -1,15 +1,26 @@
-.example {/*親div*/
+.example {
   position: relative;
   }
 
-.example p {
+.example a {/*aタグを画像の真ん中に*/
   position: absolute;
-  color: white;/*文字は白に*/
-  font-weight: bold; /*太字に*/
-  font-size: 2em;/*サイズ2倍*/
-  font-family :Quicksand, sans-serif;/*Google Font*/
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  /*以下装飾*/
+  margin:0;/*余計な隙間を除く*/
+  font-size: 40px;/*文字サイズ*/
+  border: solid red 2px; /*線で囲う*/
+  padding: 7px;/*文字と線の間の余白*/
+  color: red;/*文字色*/
+  text-decoration: none;/*下線を表示させない*/
+  background-color: black;
+  }
+
+.example a:hover{/*カーソルを当てたとき*/
+  background: rgba(255, 255, 255, 0.3);/*背景を半透明に*/
   }
 
 .example img {
