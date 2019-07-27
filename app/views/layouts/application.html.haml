@@ -19,13 +19,18 @@
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
       })();
-  %body
-    %header.header
-      .header__bar.row
-        %h1.grid-6
+    %body
+      .header.container
+        %h1.title
           %a{:href => "/"} Movieselect
-        .user_nav.grid-6
-          %a.post{:href => "/memos/new"} 投稿する
+        - if user_signed_in?
+          .header__button
+            = link_to "ログアウト", destroy_user_session_path, class: 'btn btn-default', method: :delete
+            %a.btn.btn-default{:href => "/memos/new"} 投稿する
+        - else
+          .messages
+            = link_to "ログイン", new_user_session_path, class: 'post'
+            = link_to "新規登録", new_user_registration_path, class: 'post'
     = yield
     %footer
       %p

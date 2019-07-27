@@ -1,0 +1,14 @@
+.header{
+  text-align: center;
+  background-color: black;
+  width: 100%;
+  .title{
+    float: left;
+    font-size: 40px;
+    color: white;
+  }
+    &__button{
+      padding-top: 5px;
+      float: right;
+    }
+  }

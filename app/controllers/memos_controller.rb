@@ -1,7 +1,9 @@
 class MemosController < ApplicationController
 
+  before_action :move_to_index, except: :index
+
   def index
-    @memos = Memo.all
+    @memos = Memo.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
@@ -14,7 +16,10 @@ class MemosController < ApplicationController
 
   private
   def memo_params
-    params.require(:memo).permit(:image)
+    params.require(:memo).permit(:name, :text, :image)
   end
 
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
+  end
 end
