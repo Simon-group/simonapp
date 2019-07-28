@@ -3,7 +3,7 @@ class MemosController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    @memos = Memo.order("created_at DESC").page(params[:page]).per(5)
+    @memos = Memo.order("created_at DESC").page(params[:page]).per(6)
   end
 
   def new

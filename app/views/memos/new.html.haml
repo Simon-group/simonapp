@@ -1,10 +1,5 @@
-.form
-  %label.form-group__title
-    投稿する
-    .form-group
-    = form_for @memo do |f|
-      = f.text_field :name, class: 'form-field', id: 'new_message', placeholder: 'name'
-      = f.text_field :text, class: 'form-field', id: 'new_message', placeholder: 'type a message'
-      %label 動画を選択して下さい。
-      = f.file_field :image
-      = f.submit 'Send', class: 'form__submit'
+.contents
+  .success
+    %h3
+      投稿が完了しました。
+    %a.btn{:href => "/memos"} 投稿一覧へ戻る
