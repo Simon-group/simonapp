@@ -1,0 +1,5 @@
+.contents.row
+  - @memos.each do |memo|
+    = simple_format(memo.text)
+    %span.name= memo.name
+    = video_tag memo.image.to_s, autoplay: true, muted: true, loop: true, width: "50%"

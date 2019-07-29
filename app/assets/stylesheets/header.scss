@@ -1,0 +1,21 @@
+.header{
+  text-align: center;
+  background-color: black;
+  width: 100%;
+  height: 50px;
+  .title a{
+    float: left;
+    font-size: 40px;
+    color: white;
+  }
+    &__button{
+      padding-top: 7px;
+      padding-right: 5px;
+      float: right;
+    }
+  }
+  .footer{ 
+    color: red;
+    font-size: 2rem;
+    float: left;
+  }

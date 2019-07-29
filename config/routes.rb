@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  devise_for :users
+  root  'memos#index'
+  get   'memos'     => 'memos#index'   #メイン画面
+  get   'memos/new' => 'memos#new'     #動画投稿画面
+  post  'memos'     => 'memos#create'  #動画投稿機能
 end
