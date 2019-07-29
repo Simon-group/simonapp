@@ -28,10 +28,10 @@
             = link_to "ログアウト", destroy_user_session_path, class: 'btn btn-default', method: :delete
             %a.btn.btn-default{:href => "/memos/new"} 投稿する
         - else
-          .messages
-            = link_to "ログイン", new_user_session_path, class: 'post'
-            = link_to "新規登録", new_user_registration_path, class: 'post'
+          .header__button
+            = link_to "ログイン", new_user_session_path, class: 'btn btn-default'
+            = link_to "新規登録", new_user_registration_path, class: 'btn btn-default'
     = yield
     %footer
-      %p
-        Copyright Movieselect 2019.
+      %p.footer
+        Movieselect 2019.
