@@ -1,0 +1,10 @@
+.contents
+  .contents__text
+  - if user_signed_in? && current_user.id == @memo.user_id
+    %p.name 
+    %span.name= @memo.name
+    = link_to '編集', "/memos/#{@memo.id}/edit", method: :get, class: 'btn btn-default'
+    = link_to '削除', "/memos/#{@memo.id}", method: :delete, class: 'btn btn-default'
+    %p.title 投稿者コメント
+    = simple_format(@memo.text)
+    = video_tag @memo.image.to_s, controls: true, width: "50%"

@@ -1,79 +1,37 @@
-.content{
-  &--top{
-    color: white;
-    margin-top: 100px;
-    text-align: left;
-    font-size: 20px;
+.contenter{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 900px;
+  background-color: grey;
+  .contenters{
+    border: double;
   }
-  &--card:hover{
-    border: 2px solid red;
-  }
-  &--card{
+  .title{
+    font-size: 25px;
     color: white;
-    text-align: left;
-    border: 2px solid white;
-    height: 510px;
-    width: 900px;
-    border-radius: 10px;
-    margin-top: 15px;
-    padding-bottom: 50px;
+    text-align: center;
+  }
+  .name{
     font-size: 20px;
-    position: relative;
-    &--icon{
-      font-size: 20px;
-      display: inline;
-      text-align: right;
-    }
-    &--title{
-      font-size: 20px;
-      display: inline;
-      text-align: right;
-    }
-    &--video{
-      position: absolute;
-      top: 15px;
-      right: 5px;
-      border: 2px solid white;
-      border-radius: 5px;
-      width: 553px;
-      text-align: right;
-      margin: 0 right;
-      &--speed-btn{
-      text-align: left;
-        button{
-          color: white;
-          background-color: black;
-          height: 30px;
-          width: 100px;
-          margin: 2px;
-        }
-      }
-    }
-    &--link{
-      display: inline; 
-      a{
-      height: 50px;
-      width: 100px;
-      line-height: 50px;
-      color: white;
-      border: 1px solid #605754;
-      line-height: 50px;
-      display: inline-block;
-      text-align: center;
-      }
-    }
-    &--link:hover{
-      .btn-brackets{
-        background-color: white;
-      }
-      a{
-        text-decoration: none;
-        color: black;
-      }
-    }
-    &--message{
-      margin-top: 10px;
-      font-size: 15px;
-    }
+    color: white;
+    text-align: center;
+  }
+  .btn {
+    float: right;
+    font-size: 2rem;
+    margin-top: 200px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .comment{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+  }
+  .movie{
+    position: center;
   }
 }

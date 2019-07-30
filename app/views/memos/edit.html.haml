@@ -1,11 +1,11 @@
 .chat
-  = form_for @memo do |f|
+  = form_for @memo, url: {controller: :memos, action: :update} do |f|
     .chat-group
-      %h1  動画投稿画面
+      %h1  編集画面
       .chat-group-form
         .chat-group-form__field
           .chat-group-form__field--left
-            = f.label :タイトル, class: 'chat-group-form__label'
+            = f.label :名前, class: 'chat-group-form__label'
           .chat-group-form__field--right
             = f.text_field :name, class: 'chat-group-form__input-name', placeholder: '名前を入力してください'
 
@@ -14,6 +14,4 @@
             = f.label :コメント入力, class: 'chat-group-form__label'
           .chat-group-form__field--right
             = f.text_area :text, class: 'chat-group-form__input-comment', id: 'new_message', placeholder: 'コメントを入力して下さい。'
-            = f.label :動画を選んで下さい, class: 'chat-group-form__movie'
-            = f.file_field :image, class: 'sent'
-            = f.submit 'S E N T', class: 'btn btn-dark' 
+            = f.submit ' S E N T', class: 'btn btn-dark' 
