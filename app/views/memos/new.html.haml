@@ -1,19 +1,20 @@
-.chat
-  = form_for @memo do |f|
-    .chat-group
-      %h1  動画投稿画面
-      .chat-group-form
-        .chat-group-form__field
-          .chat-group-form__field--left
-            = f.label :タイトル, class: 'chat-group-form__label'
-          .chat-group-form__field--right
-            = f.text_field :name, class: 'chat-group-form__input-name', placeholder: '名前を入力してください'
+.contents
+  .chat
+    = form_for @memo do |f|
+      .chat-group
+        %h1  動画投稿画面
+        .chat-group-form
+          .chat-group-form__field
+            .chat-group-form__field--left
+              = f.label :タイトル, class: 'chat-group-form__label'
+            .chat-group-form__field--right
+              = f.text_field :name, class: 'chat-group-form__input-name', placeholder: ' タイトルを入力してください'
 
-        .chat-group-form__field.clearfix
-          .chat-group-form__field--left
-            = f.label :コメント入力, class: 'chat-group-form__label'
-          .chat-group-form__field--right
-            = f.text_area :text, class: 'chat-group-form__input-comment', id: 'new_message', placeholder: 'コメントを入力して下さい。'
-            = f.label :動画を選んで下さい, class: 'chat-group-form__movie'
-            = f.file_field :image, class: 'sent'
-            = f.submit 'S E N T', class: 'btn btn-dark' 
+          .chat-group-form__field.clearfix
+            .chat-group-form__field--left
+              = f.label :コメント入力, class: 'chat-group-form__label'
+            .chat-group-form__field--right
+              = f.text_area :text, class: 'chat-group-form__input-comment', id: 'new_message', placeholder: 'コメントを入力して下さい。'
+              = f.label :動画を選んで下さい, class: 'chat-group-form__movie'
+              = f.file_field :image, class: 'sent'
+              = f.submit 'S E N T', class: 'btn btn-dark' 

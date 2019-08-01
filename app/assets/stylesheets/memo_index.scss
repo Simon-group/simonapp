@@ -1,37 +1,51 @@
+.contents{
+  background-image: url(tree-753069_1920.jpg);
+  background-attachment: fixed;
+}
 .contenter{
+  padding-top: 50px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
   max-width: 900px;
-  background-color: grey;
-  .contenters{
-    border: double;
-  }
+  background-color: rgba(128, 128, 128, 0.418);
+  border-radius: 100px 100px 100px 100px;
+  border: double 10px black;
+  font-family: "SoukouMincho";
   .title{
     font-size: 25px;
     color: white;
     text-align: center;
   }
   .name{
-    font-size: 20px;
+    font-size: 30px;
     color: white;
     text-align: center;
   }
-  .btn {
+  .btntype {
     float: right;
-    font-size: 2rem;
-    margin-top: 200px;
-    margin-left: 40px;
+    margin-top: 100px;
+    margin-left: 60px;
     margin-right: 40px;
+    display: none;
+    position: relative;
   }
   .comment{
     font-size: 25px;
     color: white;
     text-align: center;
   }
+  .comment-text{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+  }
   .movie{
     position: center;
+  }
+  .border{
+    border: ridge 5px rgba(0, 0, 0, 0.548);
   }
 }
