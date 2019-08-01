@@ -1,6 +1,6 @@
 class MemosController < ApplicationController
 
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index, :show]
 
   def index
     @memos = Memo.order("created_at DESC").page(params[:page]).per(5)
