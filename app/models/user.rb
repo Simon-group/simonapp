@@ -4,4 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_many :memos
+
+  validates :name, presence: true,
+  format: { with: /\A[A-Za-z][A-Za-z0-9]*\z/, allow_blank: true }
 end

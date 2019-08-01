@@ -1,26 +1,28 @@
-.content
-  %h2.title 新規登録
-  = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-    = devise_error_messages!
-    .field
-      = f.label :名前
-      %em (8文字以内)
-      %br/
-      = f.text_field :name, autofocus: true, maxlength: "8"
-    .field
-      = f.label :email
-      %br/
-      = f.email_field :email
-    .field
-      = f.label :password
-      - if @validatable
-        %em
-          (#{@minimum_password_length} characters minimum)
-      %br/
-      = f.password_field :password, autocomplete: "off"
-    .field
-      = f.label :password_confirmation
-      %br/
-      = f.password_field :password_confirmation, autocomplete: "off"
-    .actions
-      = f.submit "新規登録", class: 'btn btn-default'
+%html.contents
+  %body.imagecleah
+    .content
+      %h2.title 新規登録
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = devise_error_messages!
+        .field
+          = f.label :name
+          %em (アルファベットのみ可 8文字以内)
+          %br/
+          = f.text_field :name, autofocus: true, maxlength: "8"
+        .field
+          = f.label :email
+          %br/
+          = f.email_field :email
+        .field
+          = f.label :password
+          - if @validatable
+            %em
+              (#{@minimum_password_length} characters minimum)
+          %br/
+          = f.password_field :password, autocomplete: "off"
+        .field
+          = f.label :password_confirmation
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "off"
+        .actions
+          = f.submit "新規登録", class: 'btn btn-default'
