@@ -1,11 +1,8 @@
 .contents
-  %p.mypage
-    = @name
+  .mypage
+    = @name 
     さんの投稿一覧
-    .mypages
-      .mypagese
-      - @memos.each do |memo|
-        = video_tag memo.image.to_s, autoplay: true, muted: true, loop: true, width: "50%"
-        = simple_format(memo.text)
-        %span.name= memo.name
+  .contenter
+    =render partial: "memos/memo"
+  .paginate
     = paginate @memos
