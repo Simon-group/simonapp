@@ -12,6 +12,12 @@
   font-style: normal;
 }
 
+.border{
+  display: inline-block;
+  border: ridge 5px rgba(0, 0, 0, 0.548);
+  width: 100%;
+}
+
 .pagination>li>a {          
   border: none;     /*枠線をなくす*/
   color: black;   /*文字の色を変える*/

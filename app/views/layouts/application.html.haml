@@ -23,14 +23,5 @@
       .header.container
         %h1.title
           %a{:href => "/"} Movieselect
-        - if user_signed_in?
-          = current_user.name
-          %a.btn.btn-default{:href => "/users/#{current_user.id}"} マイページ
-          .header__button
-            = link_to "ログアウト", destroy_user_session_path, class: 'btn btn-default', method: :delete
-            %a.btn.btn-default{:href => "/memos/new"} 投稿する
-        - else
-          .header__button
-            = link_to "ログイン", new_user_session_path, class: 'btn btn-default'
-            = link_to "新規登録", new_user_registration_path, class: 'btn btn-default'
+        = render partial: "shared/header"
     = yield
