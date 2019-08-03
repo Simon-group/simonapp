@@ -1,20 +1,23 @@
-.contents
-  .chat
+%html.image1
+  %body.imagecleah
     = form_for @memo do |f|
-      .chat-group
+      .movie-group
         %h1  動画投稿画面
-        .chat-group-form
-          .chat-group-form__field
-            .chat-group-form__field--left
-              = f.label :タイトル, class: 'chat-group-form__label'
-            .chat-group-form__field--right
-              = f.text_field :name, class: 'chat-group-form__input-name', placeholder: ' タイトルを入力してください'
+        .movie-group-form
+          .movie-group-form__field
+            .movie-group-form__field--left
+              = f.label :タイトル, class: 'movie-group-form__label'
+            .movie-group-form__field--right
+              = f.text_field :name, class: 'movie-group-form__input-name', placeholder: ' タイトルを入力してください'
 
-          .chat-group-form__field.clearfix
-            .chat-group-form__field--left
-              = f.label :コメント入力, class: 'chat-group-form__label'
-            .chat-group-form__field--right
-              = f.text_area :text, class: 'chat-group-form__input-comment', id: 'new_message', placeholder: 'コメントを入力して下さい。'
-              = f.label :動画を選んで下さい, class: 'chat-group-form__movie'
-              = f.file_field :image, class: 'sent'
-              = f.submit 'S E N T', class: 'btn btn-dark' 
+          .movie-group-form__field.clearfix
+            .movie-group-form__field--left
+              = f.label :コメント入力, class: 'movie-group-form__label'
+            .movie-group-form__field--right
+              = f.text_area :text, class: 'movie-group-form__input-comment', id: 'new_message', placeholder: 'コメントを入力して下さい。'
+              .movie-group-form__field--right--mask
+                = f.label :動画を選択してください　, class: 'movie-group-form__movie'
+                = f.label :image, class: 'movie-group-form__movie' do
+                  = fa_icon 'cloud-upload', class: 'icon'
+                  = f.file_field :image, class: 'sent'
+              = f.submit '投稿する', class: 'btn btn-dark'
