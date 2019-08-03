@@ -1,18 +1,18 @@
-%html.contents
+%html.image1
   %body.imagecleah
     = form_for @memo, url: {controller: :memos, action: :update} do |f|
-      .chat-group
+      .movie-group
         %h1  編集画面
-        .chat-group-form
-          .chat-group-form__field
-            .chat-group-form__field--left
-              = f.label :タイトル, class: 'chat-group-form__label'
-            .chat-group-form__field--right
-              = f.text_field :name, class: 'chat-group-form__input-name', placeholder: '名前を入力してください'
+        .movie-group-form
+          .movie-group-form__field.clearfix
+            .movie-group-form__field--left
+              = f.label :タイトル, class: 'movie-group-form__label'
+            .movie-group-form__field--right
+              = f.text_field :name, class: 'movie-group-form__input-name', placeholder: '名前を入力してください'
 
-          .chat-group-form__field.clearfix
-            .chat-group-form__field--left
-              = f.label :コメント入力, class: 'chat-group-form__label'
-            .chat-group-form__field--right
-              = f.text_area :text, class: 'chat-group-form__input-comment', id: 'new_message', placeholder: 'コメントを入力して下さい。'
-              = f.submit ' S E N T', class: 'btn btn-dark' 
+          .movie-group-form__field.clearfix
+            .movie-group-form__field--left
+              = f.label :コメント入力, class: 'movie-group-form__label'
+            .movie-group-form__field--right
+              = f.text_area :text, class: 'movie-group-form__input-comment', id: 'new_message', placeholder: 'コメントを入力して下さい。'
+              = f.submit '編集する', class: 'btn btn-dark' 

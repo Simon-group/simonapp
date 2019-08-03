@@ -1,5 +1,7 @@
 - @memos.each do |memo|
   .contenter__field
+    %p.tokosya  投稿者
+    %p.namer=memo.user.name
     %p.title  タイトル
     %p.name=memo.name
     %p.comment 投稿者コメント
