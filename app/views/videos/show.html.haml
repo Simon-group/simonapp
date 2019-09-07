@@ -1,0 +1,16 @@
+%html.image1
+  %body.imagecleah
+    .contenter
+      %p.tokosya  投稿者
+      %p.namer=@video.user.name
+      %p.title  タイトル
+      %p.name=@video.name
+      %p.title 投稿者コメント
+      = simple_format(@video.text, class: 'comment-text')
+      .videostyle
+        = video_tag @video.image.to_s, controls: true, width: "50%"
+      - if user_signed_in? && current_user.id == @video.user_id
+        .btnstyle
+          .btnstyle__syosai
+            = link_to '編集', "/videos/#{@video.id}/edit", method: :get, class: 'btn btn-default btn-block'
+            = link_to '削除', "/videos/#{@video.id}", method: :delete, class: 'btn btn-default btn-block'

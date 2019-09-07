@@ -1,0 +1,18 @@
+%html.image1
+  %body.imagecleah
+    = form_for @video, url: {controller: :videos, action: :update} do |f|
+      .movie-group
+        %h1  編集画面
+        .movie-group-form
+          .movie-group-form__field.clearfix
+            .movie-group-form__field--left
+              = f.label :タイトル, class: 'movie-group-form__label'
+            .movie-group-form__field--right
+              = f.text_field :name, class: 'movie-group-form__input-name', placeholder: '名前を入力してください'
+
+          .movie-group-form__field.clearfix
+            .movie-group-form__field--left
+              = f.label :コメント入力, class: 'movie-group-form__label'
+            .movie-group-form__field--right
+              = f.text_area :text, class: 'movie-group-form__input-comment', id: 'new_message', placeholder: 'コメントを入力して下さい。'
+              = f.submit '編集する', class: 'btn btn-dark' 
