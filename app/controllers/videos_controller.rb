@@ -34,6 +34,7 @@ class VideosController < ApplicationController
 
   def show
     @video = Video.find(params[:id])
+    @comments = @video.comments.includes(:user)
   end
 
   private
