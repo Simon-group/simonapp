@@ -18,13 +18,16 @@
       / ここからフォーム
       - if current_user
         = form_tag("/videos/#{@video.id}/comments", method: :post) do
-          %textarea{cols: "30", name: "text", placeholder: "コメントする", rows: "2"}
-          %input{type: "submit", value: "SENT"}/
+          .message-field
+            %h4.message-field__title *************************コメント入力欄*************************
+            %textarea{name: "text", placeholder: "コメントを入力して下さい。", class: 'message-area'}
+            %input{type: 'submit', value: '投稿する', class: 'btn btn-default2'}
           .comments
-          %h4 ＜コメント一覧＞
-          - if @comments
-            - @comments.each do |comment|
-              %p
-                %strong
-                  = link_to comment.user.name, "/users/#{comment.user_id}"
-                  = comment.text
+            %h4.comments__title ＜コメント一覧＞
+            - if @comments
+              - @comments.each do |comment|
+                %p
+                  %strong
+                    = link_to comment.user.name, '/users/#{comment.user_id}',class: 'username'
+                    .comment-style
+                      = comment.text
