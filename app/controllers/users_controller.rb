@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def show
-    @name = current_user.name
-    @memos = Memo.where(user_id: current_user.id).page(params[:page]).per(5).order("created_at DESC")
+    user = User.find(params[:id])
+    @name = user.name
+    @videos = Video.where(user_id: current_user.id).page(params[:page]).per(5).order("created_at DESC")
   end
 end
