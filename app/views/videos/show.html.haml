@@ -7,6 +7,11 @@
       %p.name=@video.name
       %p.title 投稿者コメント
       = simple_format(@video.text, class: 'comment-text')
+      %h3.iinestyle いいね件数: #{@video.likes.count}
+      - if current_user.already_liked?(@video)
+        = button_to '❤️を取り消す', video_like_path(@video), method: :delete
+      - else
+        = button_to '❤️', video_likes_path(@video)
       .videostyle
         = video_tag @video.image.to_s, controls: true, width: "50%"
       - if user_signed_in? && current_user.id == @video.user_id
