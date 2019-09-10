@@ -1,13 +1,13 @@
 @font-face {
   font-family: "MotionPicture_PersonalUseOnly";
-  src: url('MotionPicture_PersonalUseOnly.ttf') format("truetype");
+  src: asset_url('MotionPicture_PersonalUseOnly.ttf') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "SoukouMincho";
-  src: url('SoukouMincho.ttf') format("truetype");
+  src: asset_url('SoukouMincho.ttf') format("truetype");
   font-weight: normal;
   font-style: normal;
 }
