@@ -12,12 +12,6 @@ class VideosController < ApplicationController
 
   def create
     @video = Video.create(name: video_params[:name], image: video_params[:image], text: video_params[:text], user_id: current_user.id)
-    @video.user_id = current_user.id
-    if @video.save
-      redirect_back(fallback_location: root_path)
-    else
-      redirect_back(fallback_location: root_path)
-    end
   end
 
   def destroy
