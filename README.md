@@ -1,17 +1,20 @@
-# README
-
-Moviecollection
+タイトル名:Moviecollection
 ====
-Overview
+## このアプリについて
 パソコンにダウンロードした動画を投稿出来る、動画投稿アプリ
 ユーザーの新規登録、ログイン、投稿した動画のマイページ画面の確認が出来る。
 詳細画面にて、動画に対していいねやコメントを記述する事も出来る。
 
-## Demo
+## デモ画面
 動画投稿画面
+
+タイトルとその動画に対しての投稿者コメント、アイコンを押し動画の選択が出来、投稿ボタンで動画の投稿をする事ができる。
 ![b5ea95c27822cc9d19a83af5829f15ba](https://user-images.githubusercontent.com/52347821/64719579-7bca8980-d503-11e9-999d-3560ff5d4afe.gif)
 
 動画詳細画面
+
+詳細ボタンを動画の詳細を確認する事が出来る。動画に対して、いいねやコメントが入力が出来、投稿した動画のダウンロードも出来る。
+
 ![d4ae7fb5e776acdc9b24fd4d43474f2f](https://user-images.githubusercontent.com/52347821/64720019-7588dd00-d504-11e9-8d1d-10c22a690825.gif)
 
 ![45b1603050342898348e360fd506c0ae](https://user-images.githubusercontent.com/52347821/64720075-8cc7ca80-d504-11e9-803a-4c8b5ffad6a8.gif)
