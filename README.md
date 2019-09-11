@@ -9,4 +9,4 @@ Overview
 
 ## Demo
 動画投稿画面
-https://gyazo.com/b5ea95c27822cc9d19a83af5829f15ba
+![b5ea95c27822cc9d19a83af5829f15ba](https://user-images.githubusercontent.com/52347821/64719579-7bca8980-d503-11e9-999d-3560ff5d4afe.gif)
