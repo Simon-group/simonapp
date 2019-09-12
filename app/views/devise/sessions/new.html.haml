@@ -5,12 +5,12 @@
       = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field
           .field__label
-          = f.label :Eメール
+          = f.label :Eメール,class: "emaillogin"
           %br/
           = f.email_field :email, autofocus: true, class: 'field__input'
         .field
           .field__label
-          = f.label :password
+          = f.label :password,class: "passwordlogin"
           %br/
           = f.password_field :password, autocomplete: "off", class: 'field__input'
         .actions
