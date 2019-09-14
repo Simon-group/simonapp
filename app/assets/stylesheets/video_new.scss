@@ -46,10 +46,10 @@
     display: none;
   }
   .btn-dark {
-    width: 80%;
-    color: black;
+    @include colorstyle(black,3rem);
+    width: 50%;
     display: inline-block;
-    margin-top: 30px;
+    margin: 3rem 0 0 4rem;
   }
 }
 
