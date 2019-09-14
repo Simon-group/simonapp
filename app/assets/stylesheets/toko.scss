@@ -6,12 +6,11 @@
   font-family: "SoukouMincho";
   background-color: rgba(0, 0, 0, 0.151);
   h1 {
+    @include colorstyle(white,3rem);
     letter-spacing: 2px;
-    font-size: 3rem;
     font-weight: bold;
     text-align: center;
     padding-bottom: 10px;
-    color: white;
   }
   .movie-group-form__field--left{
     float: left;
@@ -46,19 +45,17 @@
     
   }
   .movie-group-form__movie{
-    font-size: 2rem;
+    @include colorstyle(white,2rem);
     position: relative;
-    color: white;
   }
   .movie-group-form__label{
     color: white;
     padding-top: 10px;
   }
   .icon{
+    @include linkcolor(white,4rem);
     padding-top: 20px;
     padding-left: 20px;
-    font-size: 50px;
-    color: white;
   }
   .sent{
     padding-top: 10px;
@@ -76,7 +73,7 @@
 
 // マイページ画面のデザイン
 .mypage{
-  @include white(4rem);
+  @include colorstyle(white,4rem);
   display: inline-block;
   position: fixed;
   font-family: "SoukouMincho";
@@ -84,7 +81,6 @@
 }
 
 .labelstyle{
-  font-size: 3rem;
-  color: white;
+  @include colorstyle(white,3rem);
   font-family: "SoukouMincho";
 }

@@ -3,7 +3,7 @@
   background-color: rgba(128, 128, 128, 0.281);
   margin-top: 100px;
   .title {
-    @include centerwhite(4rem);
+    @include colorstyle(white,4rem);
     padding-top: 20px;
     font-family: "SoukouMincho";
   }
@@ -22,10 +22,10 @@
     }
   }
   .emaillogin {
-    @include white(2rem)
+    @include colorstyle(white,2rem)
   }
   .passwordlogin {
-    @include white(2rem)
+    @include colorstyle(white,2rem)
   }
   .actions {
     padding-top: 100px;

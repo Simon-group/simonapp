@@ -10,10 +10,10 @@
       %h3.iinestyle いいね件数: #{@video.likes.count}
       - if current_user.already_liked?(@video)
         = link_to video_like_path(@video), method: :delete do
-          = fa_icon "heart", class: "heartstyle-normal"
+          = fa_icon "heart", class: "heartstyle-red"
       - else
         = link_to video_likes_path(@video), method: :post do
-          = fa_icon "heart", class: "heartstyle-red"
+          = fa_icon "heart", class: "heartstyle-normal"
       .videostyle
         = video_tag @video.image.to_s, controls: true, width: "50%"
       - if user_signed_in? && current_user.id == @video.user_id
@@ -33,8 +33,6 @@
             %h4.comments__title ＜コメント一覧＞
             - if @comments
               - @comments.each do |comment|
-                %p
-                  %strong
-                    = link_to comment.user.name, "/users/#{comment.user_id}",class: "username"
-                    .comment-style
-                      = comment.text
+                = link_to comment.user.name, "/users/#{comment.user_id}",class: "username"
+                .comment-style
+                  = comment.text

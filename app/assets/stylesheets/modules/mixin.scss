@@ -1,6 +1,7 @@
 // テキストの色の指定
-@mixin white($size) {
-  color: white;
+
+@mixin colorstyle($color,$size) {
+  color: $color;
   font-size: $size;
 }
 
@@ -10,7 +11,19 @@
   font-size: $size;
 }
 
-@mixin black($size) {
-  color: black;
+@mixin linkcolor($color,$size) {
+  color: $color;
   font-size: $size;
+
+  &:hover, &:active, &:focus {
+  color: lighten($color, 20%);
+  }
+}
+
+// 背景画像の位置
+@mixin backimage {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }

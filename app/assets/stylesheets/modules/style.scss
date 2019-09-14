@@ -15,11 +15,8 @@
 
 // 背景画像
 .haikeiimage{
+  @include backimage;
   background-image: image-url("tree-753069_1920.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
 }
 
 .posthaikei{
@@ -58,10 +55,11 @@
 
 // いいねした際のハートのデザイン
 .heartstyle-red {
-  color: red;
-  font-size: 2rem;
+  @include colorstyle(red,2rem);
+  margin-left: 6rem;
 }
 .heartstyle-normal {
-  color: white;
+  color: rgba(0, 0, 0, 0.514);
   font-size: 2rem;
+  margin-left: 6rem;
 }

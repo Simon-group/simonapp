@@ -2,7 +2,7 @@
 .message-field {
   text-align: center;
   &__title {
-    @include white(2rem)
+    @include colorstyle(white,2rem)
   }
   &__area {
     width: 50%;
@@ -15,29 +15,16 @@
   }
 }
 
+// コメント入力画面
 .comments {
   text-align: center;
   &__title {
-    font-size: 24px;
-    color: white;
-  }
-  .strong {
-    background-color: white;
+    @include colorstyle(white,3rem);
   }
   .username {
-    color: white;
-    font-size: 20px;
+    @include colorstyle(white,3rem);
   }
-  .text {
-    color: white;
-    font-size: 16px;
+  .comment-style {
+    @include colorstyle(white, 3rem);
   }
-  .comment-tokosya {
-    color: white;
-  }
-}
-
-.comment-style {
-  color: white;
-  font-size: 24px;
 }

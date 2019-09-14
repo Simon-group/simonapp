@@ -8,7 +8,7 @@
   position: fixed;
   top: 0;
   .title a{
-    @include white(9rem);
+    @include colorstyle(white,9rem);
     float: left;
   }
   &__button{
@@ -21,7 +21,7 @@
 
 // ログイン名の表示部分
 .myname {
-  @include black(3rem);
+  @include colorstyle(black,3rem);
   top: 10px;
   right: 350px;
   position: fixed;
