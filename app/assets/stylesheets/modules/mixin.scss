@@ -27,3 +27,22 @@
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+// タイトル入力フォーム
+@mixin videotitle {
+  float: left;
+  width: 80%;
+  line-height: 20px;
+  padding: 10px 15px;
+  border: solid;
+}
+
+// コメント入力フォーム
+@mixin videocomment {
+  float: left;
+  width: 80%;
+  line-height: 20px;
+  padding: 10px 15px;
+  height: 250px;
+  border: solid;
+}

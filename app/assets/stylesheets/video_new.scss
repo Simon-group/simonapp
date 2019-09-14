@@ -1,69 +1,51 @@
 .movie-group {
   width: 70%;
   display: block;
-  margin-top: 150px;
-  margin-left: 185px;
+  margin: 18rem 0 0 20rem;
   font-family: "SoukouMincho";
   background-color: rgba(0, 0, 0, 0.151);
   h1 {
     @include colorstyle(white,3rem);
-    letter-spacing: 2px;
+    letter-spacing: 1rem;
     font-weight: bold;
     text-align: center;
     padding-bottom: 10px;
   }
-  .movie-group-form__field--left{
+  .movie-group-form__field--left {
     float: left;
     width: 30%;
-    padding-top: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 10px 20px 0 20px;
     font-size: 2rem;
   }
-  .movie-group-form__field--right{
+  .movie-group-form__field--right {
     float: right;
     width: 70%;
     padding-top: 10px;
   }
-  .movie-group-form__field-rught-mask{
-    padding-top: 10px;
+  .movie-group-form__input-title {
+    @include videotitle;
   }
-  .movie-group-form__input-name{
-    float: left;
-    width: 80%;
-    line-height: 20px;
-    padding: 10px 15px;
-    border: solid;
+  .movie-group-form__input-comment {
+    @include videocomment;
   }
-  .movie-group-form__input-comment{
-    float: left;
-    width: 80%;
-    line-height: 20px;
-    padding: 10px 15px;
-    height: 250px;
-    border: solid;
-    
-  }
-  .movie-group-form__movie{
+  .movie-group-form__movie {
     @include colorstyle(white,2rem);
     position: relative;
   }
-  .movie-group-form__label{
+  .movie-group-form__label {
     color: white;
     padding-top: 10px;
   }
-  .icon{
+  .icon {
     @include linkcolor(white,4rem);
-    padding-top: 20px;
-    padding-left: 20px;
+    padding: 20px 0 0 20px;
   }
-  .sent{
-    padding-top: 10px;
-    padding-bottom: 20px;
+  .sent {
+    padding: 10px 0 20px; 
     color: white;
     display: none;
   }
-  .btn-dark{
+  .btn-dark {
     width: 80%;
     color: black;
     display: inline-block;
@@ -72,7 +54,7 @@
 }
 
 // マイページ画面のデザイン
-.mypage{
+.mypage {
   @include colorstyle(white,4rem);
   display: inline-block;
   position: fixed;
@@ -80,7 +62,25 @@
   top: 100px;
 }
 
-.labelstyle{
+.labelstyle {
   @include colorstyle(white,3rem);
   font-family: "SoukouMincho";
+}
+
+// 詳細、編集、削除完了画面
+.success {
+  width: 100%;
+  margin-left: 40%;
+  margin-top: 100px;
+  margin-bottom: 0;
+  max-width: 660px;
+  &__message {
+    @include colorstyle(white,3rem);
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .redbtn {
+    @include colorstyle(red,2rem);
+    margin-left: 10%;
+  }
 }

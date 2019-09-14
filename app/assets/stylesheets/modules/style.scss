@@ -51,6 +51,11 @@
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 10px;
+  .btn {
+    @include colorstyle(black,2.5rem);
+    width: 30%;
+    margin: 0 auto;
+  }
 }
 
 // いいねした際のハートのデザイン

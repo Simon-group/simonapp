@@ -1,4 +1,4 @@
-.contenter{
+.contenter {
   display: block;
   margin-top: 150px;
   width: 100%;
@@ -10,47 +10,47 @@
   border-radius: 100px 100px 100px 100px;
   border: double 10px black;
   font-family: "SoukouMincho";
-  &__field{
+  &__field {
     border-bottom: ridge 10px rgba(0, 0, 0, 0.747);
   }
-  .tokosya{
+  .tokosya {
     padding-top: 20px;
     padding-left: 60px;
     display: block;;
     color: white;
     font-size: 3rem;
   }
-  .namer{
+  .namer {
     padding-left: 60px;
     display: block;
     color: white;
     font-size: 3rem;
   }
-  .title{
+  .title {
     font-size: 25px;
     color: white;
     text-align: center;
   }
-  .name{
+  .name {
     font-size: 30px;
     color: white;
     text-align: center;
   }
 
-  .comment{
+  .comment {
     font-size: 25px;
     color: white;
     text-align: center;
   }
-  .comment-text{
+  .comment-text {
     font-size: 30px;
     color: white;
     text-align: center;
   }
-  .movie{
+  .movie {
     position: center;
   }
-  .iinestyle{
+  .iinestyle {
     color: white;
   }
 }

@@ -2,16 +2,17 @@
 .message-field {
   text-align: center;
   &__title {
-    @include colorstyle(white,2rem)
+    @include colorstyle(white,2rem);
   }
   &__area {
+    @include colorstyle(black,2.2rem);
     width: 50%;
     height: 80px;
   }
-  // 投稿画面で使用しているbootstrap用のボタンデザイン
-  .btn-default2 {
-    font-size: 16px;
-    margin-bottom: 25px;
+  //  動画に対してコメントを入力するbootstrap用のボタンデザイン
+  .btn {
+    @include colorstyle(black,2rem);
+    margin-bottom: 2rem;
   }
 }
 
@@ -25,6 +26,6 @@
     @include colorstyle(white,3rem);
   }
   .comment-style {
-    @include colorstyle(white, 3rem);
+    @include colorstyle(white, 2.5rem);
   }
 }

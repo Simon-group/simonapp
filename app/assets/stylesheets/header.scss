@@ -1,5 +1,5 @@
 // ヘッダー部分
-.header{
+.header {
   font-family: "TitleStyle";
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
@@ -7,15 +7,17 @@
   height: 50px;
   position: fixed;
   top: 0;
-  .title a{
+  .title a {
     @include colorstyle(white,9rem);
     float: left;
   }
-  &__button{
-    padding-top: 7px;
-    padding-right: 5px;
+  &__button {
+    padding: 0.8rem 0.5rem 0 0;
     float: right;
     font-family: "SoukouMincho";
+  }
+  .btn {
+    @include colorstyle(black,1.6rem);
   }
 }
 
