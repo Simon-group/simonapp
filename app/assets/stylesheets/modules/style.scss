@@ -1,28 +1,56 @@
+// フォントのデザイン
+@font-face {
+  font-family: "TitleStyle";
+  src: asset_url('MotionPicture_PersonalUseOnly.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SoukouMincho";
+  src: asset_url('SoukouMincho.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+// 背景画像
+.haikeiimage{
+  background-image: image-url("tree-753069_1920.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.posthaikei{
+  background-color: rgba(255, 255, 255, 0);
+}
+
+// ページネーションにて使用
+.pagination>li>a {          
+  border: none;     /*枠線をなくす*/
+  color: black;   /*文字の色を変える*/
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {     
+  background: #93c9ff;     /*背景の色を変える*/
+  border-radius: 15px;     /*角を丸くする*/
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {        
+  border-radius: 15px;    /*角を丸くする*/
+}
+
+// 投稿動画の調整
 .videostyle {
   text-align: center;
 }
 
+// 投稿された時に表示されるボタンの調整
 .btnstyle {
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 10px;
-  }
-
-.mypage{
-    color: white;
-    display: inline-block;
-    font-size: 40px;
-    position: fixed;
-    font-family: "SoukouMincho";
-    top: 100px;
-}
-
-.mypagename {
-  font-size: 50px;
-}
-
-.labelstyle{
-  font-size: 3rem;
-  color: white;
-  font-family: "SoukouMincho";
 }

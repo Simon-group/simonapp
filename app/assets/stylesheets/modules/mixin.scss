@@ -1,0 +1,16 @@
+// テキストの色の指定
+@mixin white($size) {
+  color: white;
+  font-size: $size;
+}
+
+@mixin centerwhite($size) {
+  color: white;
+  text-align: center;
+  font-size: $size;
+}
+
+@mixin black($size) {
+  color: black;
+  font-size: $size;
+}

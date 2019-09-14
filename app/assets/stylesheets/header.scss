@@ -1,5 +1,5 @@
 .header{
-  font-family: "MotionPicture_PersonalUseOnly";
+  font-family: "TitleStyle";
   text-align: center;
   background-color: rgba(0, 0, 0, 0);
   width: 100%;
@@ -7,23 +7,22 @@
   position: fixed;
   top: 0;
   .title a{
+    @include white(10rem);
     float: left;
-    font-size: 80px;
-    color: white;
   }
-    &__button{
-      padding-top: 7px;
-      padding-right: 5px;
-      float: right;
-      font-family: "SoukouMincho";
-    }
+  &__button{
+    padding-top: 7px;
+    padding-right: 5px;
+    float: right;
+    font-family: "SoukouMincho";
   }
-  .myname {
-    color: black;
-    font-size: 25px;
-    top: 10px;
-    right: 350px;
-    position: fixed;
-    background-color: rgba(255, 255, 255, 0.267);
-    border-radius: 40px 5px 40px 5px;
-  }
+}
+
+.myname {
+  @include black(3rem);
+  top: 10px;
+  right: 350px;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.267);
+  border-radius: 40px 5px 40px 5px;
+}
