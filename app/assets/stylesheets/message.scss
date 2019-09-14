@@ -1,42 +1,43 @@
-.message-field{
+// 投稿詳細画面
+.message-field {
   text-align: center;
-  &__title{
-    font-size: 24px;
-    color: white;
+  &__title {
+    @include white(2rem)
   }
-  .message-area {
+  &__area {
     width: 50%;
     height: 80px;
   }
-  .btn-default2{
+  // 投稿画面で使用しているbootstrap用のボタンデザイン
+  .btn-default2 {
     font-size: 16px;
     margin-bottom: 25px;
   }
 }
 
-.comments{
+.comments {
   text-align: center;
-  &__title{
+  &__title {
     font-size: 24px;
     color: white;
   }
-  .strong{
+  .strong {
     background-color: white;
   }
-  .username{
+  .username {
     color: white;
     font-size: 20px;
   }
-  .text{
+  .text {
     color: white;
     font-size: 16px;
   }
-  .comment-tokosya{
+  .comment-tokosya {
     color: white;
   }
 }
 
-.comment-style{
+.comment-style {
   color: white;
   font-size: 24px;
 }

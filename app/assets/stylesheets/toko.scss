@@ -76,9 +76,8 @@
 
 // マイページ画面のデザイン
 .mypage{
-  color: white;
+  @include white(4rem);
   display: inline-block;
-  font-size: 40px;
   position: fixed;
   font-family: "SoukouMincho";
   top: 100px;
