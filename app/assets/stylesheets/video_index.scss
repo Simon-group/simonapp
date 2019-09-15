@@ -11,37 +11,27 @@
     border-bottom: ridge 10px rgba(0, 0, 0, 0.747);
   }
   .tokosya {
+    @include colorstyle(white,3rem);
     padding: 1.6rem 0 0 4rem;
     display: block;;
-    color: white;
-    font-size: 3rem;
   }
   .namer {
+    @include colorstyle(white,3rem);
     padding-left: 60px;
     display: block;
-    color: white;
-    font-size: 3rem;
   }
   .title {
-    font-size: 25px;
-    color: white;
-    text-align: center;
+    @include centerwhite(3rem);
   }
   .name {
-    font-size: 30px;
-    color: white;
-    text-align: center;
+    @include centerwhite(3rem);
   }
 
   .comment {
-    font-size: 25px;
-    color: white;
-    text-align: center;
+    @include centerwhite(3rem);
   }
   .comment-text {
-    font-size: 30px;
-    color: white;
-    text-align: center;
+    @include centerwhite(3rem);
   }
   .movie {
     position: center;
