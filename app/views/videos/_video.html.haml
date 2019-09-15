@@ -6,6 +6,7 @@
     %p.name=video.name
     %p.comment 投稿者コメント
     = simple_format(video.text, class: "comment-text")
+    %h3.iinestyle いいね件数: #{video.likes.count}
     .videostyle
       = video_tag video.image.to_s, autoplay: true, muted: true, loop: true, width: "50%"
     .btnstyle

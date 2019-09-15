@@ -7,21 +7,22 @@
       %p.name=@video.name
       %p.title 投稿者コメント
       = simple_format(@video.text, class: "comment-text")
-      %h3.iinestyle いいね件数: #{@video.likes.count}
-      - if current_user.already_liked?(@video)
-        = link_to video_like_path(@video), method: :delete do
-          = fa_icon "heart", class: "heartstyle-red"
-      - else
-        = link_to video_likes_path(@video), method: :post do
-          = fa_icon "heart", class: "heartstyle-normal"
       .videostyle
         = video_tag @video.image.to_s, controls: true, width: "50%"
+      %h3.iinestyle いいね件数: #{@video.likes.count}
       - if user_signed_in? && current_user.id == @video.user_id
-        .btnstyle
-          .btnstyle__syosai
-            = link_to "編集", "/videos/#{@video.id}/edit", method: :get, class: "btn btn-default btn-block"
-            = link_to "削除", "/videos/#{@video.id}", method: :delete, class: "btn btn-default btn-block"
-            .container
+        - if current_user.already_liked?(@video)
+          = link_to video_like_path(@video), method: :delete do
+            = fa_icon "heart", class: "heartstyle-red"
+        - else
+          = link_to video_likes_path(@video), method: :post do
+            = fa_icon "heart", class: "heartstyle-normal"
+        - if user_signed_in? && current_user.id == @video.user_id
+          .btnstyle
+            .btnstyle__syosai
+              = link_to "編集", "/videos/#{@video.id}/edit", method: :get, class: "btn btn-default btn-block"
+              = link_to "削除", "/videos/#{@video.id}", method: :delete, class: "btn btn-default btn-block"
+              .container
       -# メッセージ投稿フォーム
       - if current_user
         = form_tag("/videos/#{@video.id}/comments", method: :post) do

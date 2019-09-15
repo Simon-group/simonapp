@@ -60,11 +60,10 @@
 
 // いいねした際のハートのデザイン
 .heartstyle-red {
-  @include colorstyle(red,2rem);
-  margin-left: 6rem;
+  @include colorstyle(red,4rem);
+  margin-left: 8.5rem;
 }
 .heartstyle-normal {
-  color: rgba(0, 0, 0, 0.514);
-  font-size: 2rem;
-  margin-left: 6rem;
+  @include colorstyle(rgba(0, 0, 0, 0.329),4rem);
+  margin-left: 8.5rem;
 }
