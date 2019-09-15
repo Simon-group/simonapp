@@ -1,41 +1,31 @@
-.message-field{
+// 投稿詳細画面
+.message-field {
   text-align: center;
-  &__title{
-    font-size: 24px;
-    color: white;
+  &__title {
+    @include colorstyle(white,2rem);
   }
-  .message-area {
+  &__area {
+    @include colorstyle(black,2.2rem);
     width: 50%;
     height: 80px;
   }
-  .btn-default2{
-    font-size: 16px;
-    margin-bottom: 25px;
+  //  動画に対してコメントを入力するbootstrap用のボタンデザイン
+  .btn {
+    @include colorstyle(black,2rem);
+    margin-bottom: 7rem;
   }
 }
 
-.comments{
+// コメント入力画面
+.comments {
   text-align: center;
-  &__title{
-    font-size: 24px;
-    color: white;
+  &__title {
+    @include colorstyle(white,3rem);
   }
-  .strong{
-    background-color: white;
+  .username {
+    @include colorstyle(white,3rem);
   }
-  .username{
-    color: white;
-    font-size: 20px;
+  .comment-style {
+    @include colorstyle(white, 2.5rem);
   }
-  .text{
-    color: white;
-    font-size: 16px;
-  }
-.comment-tokosya{
-  color: white;
-}
-}
-.comment-style{
-  color: white;
-  font-size: 24px;
 }

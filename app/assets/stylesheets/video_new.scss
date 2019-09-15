@@ -1,0 +1,82 @@
+.movie-group {
+  width: 70%;
+  display: block;
+  margin: 18rem 0 0 20rem;
+  font-family: "SoukouMincho";
+  background-color: rgba(0, 0, 0, 0.151);
+  h1 {
+    @include colorstyle(white,3rem);
+    letter-spacing: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .movie-group-form__field--left {
+    float: left;
+    width: 30%;
+    padding: 10px 20px 0 20px;
+    font-size: 2rem;
+  }
+  .movie-group-form__field--right {
+    float: right;
+    width: 70%;
+    padding-top: 10px;
+  }
+  .movie-group-form__input-title {
+    @include videotitle;
+  }
+  .movie-group-form__input-comment {
+    @include videocomment;
+  }
+  .movie-group-form__movie {
+    @include colorstyle(white,2rem);
+    position: relative;
+  }
+  .movie-group-form__label {
+    color: white;
+    padding-top: 10px;
+  }
+  .icon {
+    @include linkcolor(white,4rem);
+    padding: 20px 0 0 20px;
+  }
+  .sent {
+    padding: 10px 0 20px; 
+    color: white;
+    display: none;
+  }
+  .btn-dark {
+    @include colorstyle(black,3rem);
+    width: 50%;
+    display: inline-block;
+    margin: 3rem 0 0 4rem;
+  }
+}
+
+// マイページ画面のデザイン
+.mypage {
+  @include colorstyle(white,4rem);
+  display: inline-block;
+  position: fixed;
+  font-family: "SoukouMincho";
+  top: 100px;
+}
+
+.labelstyle {
+  @include colorstyle(white,3rem);
+  font-family: "SoukouMincho";
+}
+
+// 詳細、編集、削除完了画面
+.success {
+  width: 100%;
+  margin: 15em 0 0 40em;
+  max-width: 660px;
+  &__message {
+    @include colorstyle(white,3rem);
+  }
+  .redbtn {
+    @include colorstyle(red,2rem);
+    margin-left: 8rem;
+  }
+}

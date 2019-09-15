@@ -1,13 +1,12 @@
 @import "./reset";
 @import "bootstrap-sprockets";
 @import "bootstrap";
-@import 'font-awesome-sprockets';
-@import 'font-awesome';
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "modules/mixin";
 @import "modules/style";
-@import "modules/opsion";
 @import "header";
-@import "toko";
-@import "toko-ran";
 @import "login";
+@import "video_new";
 @import "video_index";
 @import "message";

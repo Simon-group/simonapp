@@ -1,56 +1,43 @@
-.contenter{
+.contenter {
   display: block;
-  margin-top: 150px;
+  margin: 13rem auto 0;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0;
   max-width: 900px;
   background-color: rgba(128, 128, 128, 0.418);
   border-radius: 100px 100px 100px 100px;
   border: double 10px black;
   font-family: "SoukouMincho";
-  &__field{
+  &__field {
     border-bottom: ridge 10px rgba(0, 0, 0, 0.747);
   }
-  .tokosya{
-    padding-top: 20px;
-    padding-left: 60px;
+  .tokosya {
+    @include colorstyle(white,3rem);
+    padding: 1.6rem 0 0 4rem;
     display: block;;
-    color: white;
-    font-size: 3rem;
-    }
-  .namer{
+  }
+  .namer {
+    @include colorstyle(white,3rem);
     padding-left: 60px;
     display: block;
-    color: white;
-    font-size: 3rem;
-    }
-  .title{
-    font-size: 25px;
-    color: white;
-    text-align: center;
   }
-  .name{
-    font-size: 30px;
-    color: white;
-    text-align: center;
+  .title {
+    @include centerwhite(3rem);
+  }
+  .name {
+    @include centerwhite(3rem);
   }
 
-  .comment{
-    font-size: 25px;
-    color: white;
-    text-align: center;
+  .comment {
+    @include centerwhite(3rem);
   }
-  .comment-text{
-    font-size: 30px;
-    color: white;
-    text-align: center;
+  .comment-text {
+    @include centerwhite(3rem);
   }
-  .movie{
+  .movie {
     position: center;
   }
-  .iinestyle{
+  .iinestyle {
     color: white;
+    padding: 0 0 3rem 3rem;
   }
 }

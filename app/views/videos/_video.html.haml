@@ -5,14 +5,15 @@
     %p.title  タイトル
     %p.name=video.name
     %p.comment 投稿者コメント
-    = simple_format(video.text, class: 'comment-text')
+    = simple_format(video.text, class: "comment-text")
+    %h3.iinestyle いいね件数: #{video.likes.count}
     .videostyle
       = video_tag video.image.to_s, autoplay: true, muted: true, loop: true, width: "50%"
     .btnstyle
       .btnstyle__syosai
-        = link_to '詳細', "/videos/#{video.id}", method: :get, class: 'btn btn-default btn-block'
+        = link_to "詳細", "/videos/#{video.id}", method: :get, class: "btn btn-default btn-block"
       - if user_signed_in? && current_user.id == video.user_id
         .btnstyle__syosai
-          = link_to '編集', "/videos/#{video.id}/edit", method: :get, class: 'btn btn-default btn-block'
+          = link_to "編集", "/videos/#{video.id}/edit", method: :get, class: "btn btn-default btn-block"
         .btnstyle__syosai
-          = link_to '削除', "/videos/#{video.id}", method: :delete, class: 'btn btn-default btn-block'
+          = link_to "削除", "/videos/#{video.id}", method: :delete, class: "btn btn-default btn-block"

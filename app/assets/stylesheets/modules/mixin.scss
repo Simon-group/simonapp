@@ -1,0 +1,50 @@
+// テキストの色の指定
+
+@mixin colorstyle($color,$size) {
+  color: $color;
+  font-size: $size;
+}
+
+@mixin centerwhite($size) {
+  color: white;
+  text-align: center;
+  font-size: $size;
+}
+
+@mixin linkcolor($color,$size) {
+  color: $color;
+  font-size: $size;
+
+  &:hover, &:active, &:focus {
+  color: lighten($color, 20%);
+  }
+}
+
+// 背景画像の位置
+@mixin backimage {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+// タイトル入力フォーム
+@mixin videotitle {
+  @include colorstyle(black,3rem);
+  float: left;
+  width: 80%;
+  line-height: 20px;
+  padding: 10px 15px;
+  border: solid;
+}
+
+// コメント入力フォーム
+@mixin videocomment {
+  @include colorstyle(black,3rem);
+  float: left;
+  width: 80%;
+  line-height: 20px;
+  padding: 10px 15px;
+  height: 250px;
+  border: solid;
+}
