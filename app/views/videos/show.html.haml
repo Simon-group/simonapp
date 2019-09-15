@@ -27,7 +27,7 @@
         = form_tag("/videos/#{@video.id}/comments", method: :post) do
           .message-field
             %h4.message-field__title *************************コメント入力欄*************************
-            %textarea{name: "text", placeholder: "コメントを入力して下さい。", class: "message-field__area"}
+            %textarea{name: "text", placeholder: "コメントを入力して下さい。(30文字以内)", class: "message-field__area"}
             %input{type: "submit", value: "投稿する", class: "btn btn-default"}
           .comments
             %h4.comments__title ＜コメント一覧＞

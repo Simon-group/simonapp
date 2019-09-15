@@ -70,17 +70,13 @@
 // 詳細、編集、削除完了画面
 .success {
   width: 100%;
-  margin-left: 40%;
-  margin-top: 100px;
-  margin-bottom: 0;
+  margin: 15em 0 0 40em;
   max-width: 660px;
   &__message {
     @include colorstyle(white,3rem);
-    padding-top: 30px;
-    padding-bottom: 20px;
   }
   .redbtn {
     @include colorstyle(red,2rem);
-    margin-left: 10%;
+    margin-left: 8rem;
   }
 }
