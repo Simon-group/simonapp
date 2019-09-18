@@ -15,7 +15,8 @@ class VideosController < ApplicationController
     if @video.save
       redirect_to root_path, notice: '動画の投稿に成功しました！'
     else
-      redirect_to root_path, notice: '投稿の投稿に失敗しました......'
+      flash.now[:alert] = '動画の投稿に失敗しました.....'
+      render :new
     end
   end
 
