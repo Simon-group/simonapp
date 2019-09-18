@@ -74,3 +74,9 @@
   color: white;
   font-size: 3rem;
 }
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
