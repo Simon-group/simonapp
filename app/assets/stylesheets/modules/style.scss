@@ -67,3 +67,10 @@
   @include colorstyle(rgba(0, 0, 0, 0.329),4rem);
   margin-left: 8.5rem;
 }
+
+// フラッシュメッセージの設定
+.notification {
+  background-color: black;
+  color: white;
+  font-size: 3rem;
+}
