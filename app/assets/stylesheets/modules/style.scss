@@ -70,9 +70,9 @@
 
 // フラッシュメッセージの設定
 .notification {
+  @include colorstyle(white,3rem);
+  font-family: "SoukouMincho";
   background-color: black;
-  color: white;
-  font-size: 3rem;
 }
 
 .clearfix::after {

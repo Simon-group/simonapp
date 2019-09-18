@@ -10,12 +10,13 @@
       .videostyle
         = video_tag @video.image.to_s, controls: true, width: "50%"
       %h3.iinestyle いいね件数: #{@video.likes.count}
-      - if user_signed_in? && current_user.already_liked?(@video)
-        = link_to video_like_path(@video), method: :delete do
-          = fa_icon "heart", class: "heartstyle-red"
-      - else
-        = link_to video_likes_path(@video), method: :post do
-          = fa_icon "heart", class: "heartstyle-normal"
+      - if user_signed_in?
+        - if user_signed_in? && current_user.already_liked?(@video)
+          = link_to video_like_path(@video), method: :delete do
+            = fa_icon "heart", class: "heartstyle-red"
+        - else
+          = link_to video_likes_path(@video), method: :post do
+            = fa_icon "heart", class: "heartstyle-normal"
       - if user_signed_in? && current_user.id == @video.user_id
         .btnstyle
           .btnstyle__syosai
@@ -27,12 +28,6 @@
         = form_tag("/videos/#{@video.id}/comments", method: :post) do
           .message-field
             %h4.message-field__title *************************コメント入力欄*************************
-            %textarea{name: "text", placeholder: "コメントを入力して下さい。(30文字以内)", class: "message-field__area"}
+            %textarea{name: "text", placeholder: "コメントを入力して下さい。(30文字以内)", class: "message-field__area",maxlength: "30"}
             %input{type: "submit", value: "投稿する", class: "btn btn-default"}
-          .comments
-            %h4.comments__title ＜コメント一覧＞
-            - if @comments
-              - @comments.each do |comment|
-                = link_to comment.user.name, "/users/#{comment.user_id}",class: "username"
-                .comment-style
-                  = comment.text
+          = render partial: "comments/comment"

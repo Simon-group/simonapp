@@ -12,8 +12,11 @@ class VideosController < ApplicationController
 
   def create
     @video = Video.create(name: video_params[:name], image: video_params[:image], text: video_params[:text], user_id: current_user.id)
-    @video.save
-    redirect_to root_path, notice: '動画の投稿に成功しました！'
+    if @video.save
+      redirect_to root_path, notice: '動画の投稿に成功しました！'
+    else
+      redirect_to root_path, notice: '投稿の投稿に失敗しました......'
+    end
   end
 
   def destroy
