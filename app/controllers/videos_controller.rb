@@ -12,6 +12,8 @@ class VideosController < ApplicationController
 
   def create
     @video = Video.create(name: video_params[:name], image: video_params[:image], text: video_params[:text], user_id: current_user.id)
+    @video.save
+    redirect_to root_path, notice: '動画の投稿に成功しました！'
   end
 
   def destroy
@@ -19,6 +21,7 @@ class VideosController < ApplicationController
     if video.user_id == current_user.id
       video.destroy
     end
+    redirect_to root_path, notice: '投稿の削除に成功しました！'
   end
 
   def edit
@@ -29,6 +32,7 @@ class VideosController < ApplicationController
     video = Video.find(params[:id])
     if video.user_id == current_user.id
       video.update(video_params)
+      redirect_to root_path, notice: '投稿の編集に成功しました！'
     end
   end
 

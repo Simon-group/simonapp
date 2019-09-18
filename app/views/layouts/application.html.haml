@@ -21,6 +21,9 @@
       })();
     %body
       .header.container
+        .notification
+          - flash.each do |key, value|
+            = content_tag :div, value, class: key
         %h1.title
           %a{href: "/"} Moviecollection
         = render partial: "shared/header"

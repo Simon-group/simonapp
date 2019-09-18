@@ -16,4 +16,12 @@
         .btnstyle__syosai
           = link_to "編集", "/videos/#{video.id}/edit", method: :get, class: "btn btn-default btn-block"
         .btnstyle__syosai
-          = link_to "削除", "/videos/#{video.id}", method: :delete, class: "btn btn-default btn-block"
+          = link_to "削除", "/videos/#{video.id}", method: :delete, data: {confirm: "本当に削除してもいいですか？"},class: "btn btn-default btn-block", id: "item-delete-btn"
+          -# モーダル実装用
+          -# #overlay
+          -#   #modalWindow
+          -#     .modal-message-box
+          -#       %div 確認
+          -#       %div 本当に削除しますか？
+          -#     %button#modal-close-btn キャンセル
+          -#     %button#delete-comformation-btn 削除する
