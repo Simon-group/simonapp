@@ -21,7 +21,7 @@
         .btnstyle
           .btnstyle__syosai
             = link_to "編集", "/videos/#{@video.id}/edit", method: :get, class: "btn btn-default btn-block"
-            = link_to "削除", "/videos/#{@video.id}", method: :delete, class: "btn btn-default btn-block", data: {confirm: "本当に削除してもいいですか？"}
+            = link_to "削除", "/videos/#{@video.id}", method: :delete, class: "btn btn-default btn-block", data:{ confirm: '本当に削除して良いですか?', cancel: 'やめる', commit: '削除する'}, title: '削除確認'
             .container
       -# メッセージ投稿フォーム
       - if current_user
