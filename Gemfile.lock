@@ -119,6 +119,8 @@ GEM
       sprockets (< 4.0)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+    data-confirm-modal (1.6.2)
+      railties (>= 3.0)
     devise (4.6.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -339,6 +341,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   compass-rails (= 3.1.0)
+  data-confirm-modal
   devise
   fog-aws
   font-awesome-rails

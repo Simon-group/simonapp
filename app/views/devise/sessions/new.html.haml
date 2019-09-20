@@ -7,11 +7,11 @@
           .field__label
           = f.label :Eメール,class: "emaillogin"
           %br
-          = f.email_field :email, autofocus: true, class: 'field__input'
+          = f.email_field :email, autofocus: true, class: "field__input", value: "test@test"
         .field
           .field__label
           = f.label :password,class: "passwordlogin"
           %br
-          = f.password_field :password, autocomplete: "off", class: 'field__input'
+          = f.password_field :password, autocomplete: "off", class: "field__input",value: "11111111"
         .actions
-          = f.submit "ログイン", class: 'btn btn-default'
+          = f.submit "ログイン", class: "btn btn-default"
