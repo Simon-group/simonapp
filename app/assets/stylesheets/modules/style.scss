@@ -59,13 +59,19 @@
 }
 
 // いいねした際のハートのデザイン
+
+.iinestyle {
+  color: white;
+  padding-left: 3rem;
+}
+
 .heartstyle-red {
   @include colorstyle(red,4rem);
-  margin-left: 8.5rem;
+  margin-left: 1.8rem;
 }
 .heartstyle-normal {
   @include colorstyle(rgba(0, 0, 0, 0.329),4rem);
-  margin-left: 8.5rem;
+  margin-left: 1.8rem;
 }
 
 // フラッシュメッセージの設定

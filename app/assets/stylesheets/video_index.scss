@@ -1,7 +1,8 @@
 .contenter {
   display: block;
-  margin: 13rem auto 0;
-  width: 100%;
+  box-sizing: border-box;
+  margin-top: 13rem;
+  width: 50%;
   max-width: 900px;
   background-color: rgba(128, 128, 128, 0.418);
   border-radius: 100px 100px 100px 100px;
@@ -35,9 +36,5 @@
   }
   .movie {
     position: center;
-  }
-  .iinestyle {
-    color: white;
-    padding: 0 0 3rem 3rem;
   }
 }

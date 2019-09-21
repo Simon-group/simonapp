@@ -1,13 +1,23 @@
 // 投稿詳細画面
-.message-field {
-  text-align: center;
-  &__title {
-    @include colorstyle(white,2rem);
-  }
-  &__area {
-    @include colorstyle(black,2.2rem);
-    width: 50%;
-    height: 80px;
+.message {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 50%;
+  max-width: 900px;
+  background-color: rgba(128, 128, 128, 0.418);
+  border-radius: 100px 100px 100px 100px;
+  border: double 10px black;
+  font-family: "SoukouMincho";
+  .message-field {
+    text-align: center;
+    &__title {
+      @include colorstyle(white,2rem);
+    }
+    &__area {
+      @include colorstyle(black,2.2rem);
+      width: 50%;
+      height: 80px;
+    }
   }
   //  動画に対してコメントを入力するbootstrap用のボタンデザイン
   .btn {
@@ -18,7 +28,9 @@
 
 // コメント入力画面
 .comments {
-  text-align: center;
+  box-sizing: border-box;
+  float: right;
+  width: 50%;
   &__title {
     @include colorstyle(white,3rem);
   }

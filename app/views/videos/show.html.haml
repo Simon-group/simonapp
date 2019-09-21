@@ -1,33 +1,35 @@
 %html.haikeiimage
   %body.posthaikei
-    .contenter
-      %p.tokosya  投稿者
-      %p.namer=@video.user.name
-      %p.title  タイトル
-      %p.name=@video.name
-      %p.title 投稿者コメント
-      = simple_format(@video.text, class: "comment-text")
-      .videostyle
-        = video_tag @video.image.to_s, controls: true, width: "50%"
-      %h3.iinestyle いいね件数: #{@video.likes.count}
-      - if user_signed_in?
-        - if user_signed_in? && current_user.already_liked?(@video)
-          = link_to video_like_path(@video), method: :delete do
-            = fa_icon "heart", class: "heartstyle-red"
-        - else
-          = link_to video_likes_path(@video), method: :post do
-            = fa_icon "heart", class: "heartstyle-normal"
-      - if user_signed_in? && current_user.id == @video.user_id
-        .btnstyle
-          .btnstyle__syosai
-            = link_to "編集", "/videos/#{@video.id}/edit", method: :get, class: "btn btn-default btn-block"
-            = link_to "削除", "/videos/#{@video.id}", method: :delete, class: "btn btn-default btn-block", data:{ confirm: '本当に削除してよろしいですか?', cancel: 'やめる', commit: '削除する'}, title: '削除確認画面'
-            .container
-      -# メッセージ投稿フォーム
-      - if current_user
-        = form_tag("/videos/#{@video.id}/comments", method: :post) do
-          .message-field
-            %h4.message-field__title *************************コメント入力欄*************************
-            %textarea{name: "text", placeholder: "コメントを入力して下さい。(30文字以内)", class: "message-field__area",maxlength: "30"}
-            %input{type: "submit", value: "投稿する", class: "btn btn-default"}
-          = render partial: "comments/comment"
+    .content
+      .contenter
+        %p.tokosya  投稿者
+        %p.namer=@video.user.name
+        %p.title  タイトル
+        %p.name=@video.name
+        %p.title 投稿者コメント
+        = simple_format(@video.text, class: "comment-text")
+        .videostyle
+          = video_tag @video.image.to_s, controls: true, width: "50%"
+        %h3.iinestyle #{@video.likes.count}
+        - if user_signed_in?
+          - if user_signed_in? && current_user.already_liked?(@video)
+            = link_to video_like_path(@video), method: :delete do
+              = fa_icon "heart", class: "heartstyle-red"
+          - else
+            = link_to video_likes_path(@video), method: :post do
+              = fa_icon "heart", class: "heartstyle-normal"
+        - if user_signed_in? && current_user.id == @video.user_id
+          .btnstyle
+            .btnstyle__syosai
+              = link_to "編集", "/videos/#{@video.id}/edit", method: :get, class: "btn btn-default btn-block"
+              = link_to "削除", "/videos/#{@video.id}", method: :delete, class: "btn btn-default btn-block", data:{ confirm: '本当に削除してよろしいですか?', cancel: 'やめる', commit: '削除する'}, title: '削除確認画面'
+              .container
+        -# メッセージ投稿フォーム
+      .message
+        - if current_user
+          = form_tag("/videos/#{@video.id}/comments", method: :post, id: "new_comment") do
+            = render partial: "comments/comment"
+            .message-field
+              %h4.message-field__title *************************コメント入力欄*************************
+              %textarea{name: "text", cols: "30", rows:"2", placeholder: "コメントを入力して下さい。(30文字以内)", class: "message-field__area",maxlength: "30"}
+              %input{type: "submit", value: "投稿する", class: "btn btn-default"}
