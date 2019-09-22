@@ -21,7 +21,7 @@ $(document).on('turbolinks:load', function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      $('.comments').append(html);
+      $('.comments').prepend(html);
       $('.message-field__area').val('')
     })
 //↓エラー時の処理

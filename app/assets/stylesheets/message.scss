@@ -1,11 +1,10 @@
 // 投稿詳細画面
 .message {
-  display: inline-block;
-  box-sizing: border-box;
-  width: 50%;
+  display: block;
+  margin: 13rem auto 0;
+  width: 100%;
   max-width: 900px;
   background-color: rgba(128, 128, 128, 0.418);
-  border-radius: 100px 100px 100px 100px;
   border: double 10px black;
   font-family: "SoukouMincho";
   .message-field {
@@ -24,20 +23,17 @@
     @include colorstyle(black,2rem);
     margin-bottom: 7rem;
   }
-}
-
-// コメント入力画面
-.comments {
-  box-sizing: border-box;
-  float: right;
-  width: 50%;
-  &__title {
+  // コメント入力画面
+  .commentlist {
     @include colorstyle(white,3rem);
   }
-  .username {
-    @include colorstyle(white,3rem);
-  }
-  .comment-style {
-    @include colorstyle(white, 2.5rem);
+  .comments {
+    text-align: left;
+    .username {
+      @include colorstyle(white,3rem);
+    }
+    .comment-style {
+      @include colorstyle(white, 2.5rem);
+    }
   }
 }

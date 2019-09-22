@@ -5,7 +5,10 @@ Rails.application.routes.draw do
     resources :comments, only: [:update, :create]
   end
   resources :videos do
-    resources :likes, only: [:create, :destroy]
   end
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+  end
+
+  post   '/like/:video_id', to: 'likes#like',   as: 'like'
+  delete '/like/:video_id', to: 'likes#unlike', as: 'unlike'
 end

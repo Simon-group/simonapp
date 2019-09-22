@@ -1,7 +1,5 @@
-.comments
-  %h4.comments__title ＜コメント一覧＞
-  - if @comments
-    - @comments.each do |comment|
-      = link_to comment.user.name, "/users/#{comment.user_id}",class: "username"
-      .comment-style
-        = comment.text
+- if @comments
+  - @comments.each do |comment|
+    = link_to comment.user.name, "/users/#{comment.user_id}",class: "username"
+    .comment-style
+      = comment.text
