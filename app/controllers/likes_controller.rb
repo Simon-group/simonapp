@@ -1,12 +1,21 @@
 class LikesController < ApplicationController
-  def create
-    @like = current_user.likes.create(video_id: params[:video_id])
-    redirect_back(fallback_location: root_path)
+  before_action :set_variables
+  def like
+    @like = current_user.likes.new(video_id: @video.id)
+    @like.save
   end
 
-  def destroy
-    @like = Like.find_by(video_id: params[:video_id], user_id: current_user.id)
+  def unlike
+    @like = current_user.likes.find_by(video_id: @video.id)
     @like.destroy
-    redirect_back(fallback_location: root_path)
   end
+
+  private
+
+  def set_variables
+    @video = Video.find(params[:video_id])
+    @id_name = "#like-link-#{@video.id}"
+    @id_heart = "#heart-#{@video.id}"
+  end
+  
 end

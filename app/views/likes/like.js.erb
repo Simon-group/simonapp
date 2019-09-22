@@ -1,0 +1,4 @@
+$("<%= @id_heart %>").remove('');
+$("<%= @id_name %>").html('<%= escape_javascript(render("likes/like", video: @video  )) %>');
+$("<%= @id_heart %>").removeClass('heartstyle-normal');
+$("<%= @id_heart %>").addClass('heartstyle-red');

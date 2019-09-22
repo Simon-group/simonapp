@@ -43,6 +43,7 @@ class VideosController < ApplicationController
   def show
     @video = Video.find(params[:id])
     @comments = @video.comments.includes(:user)
+    @comments = Comment.all.reverse_order
     @like = Like.new
   end
 
