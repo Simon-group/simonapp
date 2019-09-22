@@ -10,14 +10,7 @@
         = simple_format(@video.text, class: "comment-text")
         .videostyle
           = video_tag @video.image.to_s, controls: true, width: "50%"
-        %h3.iinestyle{id: "like-link-#{@video.id}"} #{@video.likes.count}
-        - if user_signed_in?
-          - if user_signed_in? && current_user.likes.find_by(video_id: @video.id)
-            = link_to unlike_path(@video.id), method: :delete, remote: true do
-              = fa_icon "heart", class: "heartstyle-red", id: "heart-#{@video.id}"
-          - else
-            = link_to like_path(@video.id), method: :post, remote: true do
-              = fa_icon "heart", class: "heartstyle-normal", id: "heart-#{@video.id}"
+        = render "likes/like", video: @video
         - if user_signed_in? && current_user.id == @video.user_id
           .btnstyle
             .btnstyle__syosai
