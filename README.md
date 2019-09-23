@@ -29,7 +29,7 @@
 
 タイトルとその動画に対しての投稿者コメント、アイコンを押し動画の選択が出来、投稿ボタンで動画の投稿をする事ができる。
 
-![011c5d6228214fbe81e16cbdc158cd34](https://user-images.githubusercontent.com/52347821/65402564-2d25c500-de0a-11e9-89d5-6037ee0e9011.gif)
+![68d8fa88c48d838f2b63af286ee60207](https://user-images.githubusercontent.com/52347821/65439513-3cd0f800-de62-11e9-9242-f3c7edb951f0.gif)
 
 動画詳細画面
 
