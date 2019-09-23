@@ -32,6 +32,9 @@
     .username {
       @include colorstyle(white,3rem);
     }
+    .username a{
+      @include colorstyle(white,3rem);
+    }
     .comment-style {
       @include colorstyle(white, 2.5rem);
     }
