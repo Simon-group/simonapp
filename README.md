@@ -22,13 +22,14 @@
 
 トップページ（投稿してないユーザー）
 
-![52c972d6d62b79a65a92e13cd0793481](https://user-images.githubusercontent.com/52347821/65402228-0f576080-de08-11e9-8a70-788a74910ff6.gif)
+![e07879ef13587b86f354e3b197e60c0f](https://user-images.githubusercontent.com/52347821/65402616-8db50200-de0a-11e9-8e71-9fe18d8fd2fb.gif)
 
 
 動画投稿画面
 
 タイトルとその動画に対しての投稿者コメント、アイコンを押し動画の選択が出来、投稿ボタンで動画の投稿をする事ができる。
-![b5ea95c27822cc9d19a83af5829f15ba](https://user-images.githubusercontent.com/52347821/64719579-7bca8980-d503-11e9-999d-3560ff5d4afe.gif)
+
+![011c5d6228214fbe81e16cbdc158cd34](https://user-images.githubusercontent.com/52347821/65402564-2d25c500-de0a-11e9-89d5-6037ee0e9011.gif)
 
 動画詳細画面
 
@@ -54,5 +55,3 @@
 確認ダイアログ(ログアウト、削除時)
 
 ![4822d572410bb936f0be92c545d0bce4](https://user-images.githubusercontent.com/52347821/65402469-83463880-de09-11e9-9b59-a7e3ae31269f.gif)
-
-
