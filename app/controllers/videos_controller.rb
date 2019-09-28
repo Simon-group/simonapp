@@ -41,7 +41,6 @@ class VideosController < ApplicationController
   end
 
   def show
-    byebug
     @video = Video.find(params[:id])
     @comments = @video.comments.includes(:user)
     @comments = Comment.all.reverse_order
