@@ -74,6 +74,7 @@ gem 'mini_magick'
 gem 'haml-rails'
 gem 'kaminari'
 gem 'devise'
+gem 'ransack'
 gem 'jquery-rails'
 
 group :production do

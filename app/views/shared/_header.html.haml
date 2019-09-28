@@ -1,3 +1,7 @@
+%p 検索
+= form_tag(videos_path,method: 'get') do
+  = text_field_tag :search
+  = submit_tag 'Search', name: nil
 - if user_signed_in? 
   .header__button
     %a.btn.btn-default{href: "/users/#{current_user.id}"} マイページ
