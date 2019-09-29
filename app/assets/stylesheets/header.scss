@@ -7,6 +7,10 @@
   height: 50px;
   position: fixed;
   top: 0;
+  .header-button{
+    box-sizing: border-box;
+    margin-bottom: 10rem;
+  }
   .title a {
     @include colorstyle(white,9rem);
     float: left;
@@ -25,8 +29,27 @@
 .myname {
   @include colorstyle(black,3rem);
   top: 10px;
-  right: 350px;
+  right: 85rem;
   position: fixed;
   background-color: rgba(255, 255, 255, 0.267);
   border-radius: 40px 5px 40px 5px;
+}
+
+.search{
+  padding-top: 11rem;
+  .search-title {
+    @include colorstyle(white,3rem);
+  }
+
+  .search-field {
+    color: black;
+    width: 20%;
+    box-sizing: border-box;
+    margin-left: 100rem;
+    position: fixed;
+  }
+  .btn {
+    position: fixed;
+    margin-left: 129rem;
+  }
 }

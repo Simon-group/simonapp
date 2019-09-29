@@ -3,7 +3,7 @@ class VideosController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @videos = Video.order("created_at DESC").page(params[:page]).per(5)
+    @videos = Video.order("created_at DESC").page(params[:page]).per(5).search(params[:search])
   end
 
   def new
