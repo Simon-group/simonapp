@@ -25,6 +25,12 @@
 ![e07879ef13587b86f354e3b197e60c0f](https://user-images.githubusercontent.com/52347821/65402616-8db50200-de0a-11e9-8e71-9fe18d8fd2fb.gif)
 
 
+検索機能
+
+動画のタイトルで検索をする事が出来る。
+
+![0ead45c54e8c6534b684fb1f3631cdcf](https://user-images.githubusercontent.com/52347821/65830966-2659ef00-e2ef-11e9-99ca-6d67cfb05ec8.gif)
+
 動画投稿画面
 
 タイトルとその動画に対しての投稿者コメント、アイコンを押し動画の選択が出来、投稿ボタンで動画の投稿をする事ができる。
