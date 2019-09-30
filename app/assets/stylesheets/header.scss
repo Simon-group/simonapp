@@ -36,7 +36,7 @@
 }
 
 .search{
-  padding-top: 11rem;
+  margin-right: 37rem;
   .search-title {
     @include colorstyle(white,3rem);
   }
@@ -44,12 +44,12 @@
   .search-field {
     color: black;
     width: 20%;
+    height: 3.5rem;
     box-sizing: border-box;
-    margin-left: 100rem;
     position: fixed;
   }
   .btn {
     position: fixed;
-    margin-left: 129rem;
+    margin-left: 29rem;
   }
 }

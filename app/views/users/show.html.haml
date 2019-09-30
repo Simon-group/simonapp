@@ -1,8 +1,7 @@
-%body.haikeiimage
-  .mypage
-    = @name 
-    さんの投稿一覧
-  .contenter
-    = render partial: "videos/video"
-  .paginate
-    = paginate @videos
+.mypage
+  = @name 
+  さんの投稿一覧
+.contenter
+  = render partial: "videos/video"
+.paginate
+  = paginate @videos

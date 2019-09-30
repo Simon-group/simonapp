@@ -1,7 +1,6 @@
 - if user_signed_in?
   .header__button
     %a.btn.btn-default{href: "/users/#{current_user.id}"} マイページ
-  .header__button
     = link_to "ログアウト", destroy_user_session_path, class: "btn btn-default", data:{ confirm: ' ログアウトしてよろしいですか?', cancel: 'やめる', commit: 'ログアウト'}, title: 'ログアウト確認画面',method: :delete
     %a.btn.btn-default{href: "/videos/new"} 投稿する
     .myname

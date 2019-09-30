@@ -1,22 +1,21 @@
-%body.haikeiimage.posthaikei
-  = form_for @video do |f|
-    .movie-group
-      %h1  動画投稿画面
-      .movie-group-form
-        .movie-group-form__field
-          .movie-group-form__field--left
-            = f.label :タイトル, class: "movie-group-form__label"
-          .movie-group-form__field--right
-            = f.text_field :name, class: "movie-group-form__input-title", placeholder: "タイトルを入力してください"
+= form_for @video do |f|
+  .movie-group
+    %h1  動画投稿画面
+    .movie-group-form
+      .movie-group-form__field
+        .movie-group-form__field--left
+          = f.label :タイトル, class: "movie-group-form__label"
+        .movie-group-form__field--right
+          = f.text_field :name, class: "movie-group-form__input-title", placeholder: "タイトルを入力してください"
 
-        .movie-group-form__field.clearfix
-          .movie-group-form__field--left
-            = f.label :コメント入力, class: "movie-group-form__label"
-          .movie-group-form__field--right
-            = f.text_area :text, class: "movie-group-form__input-comment", id: "new_message", placeholder: "コメントを入力して下さい。"
-            .movie-group-form__field--right--mask
-              = f.label :image, for: "upload-image", class: "movie-group-form__movie" do
-                = fa_icon "cloud-upload fa-spin", class: "icon"
-                = f.file_field :image, class: "hidden", id: "upload-image"
-                = f.label :動画を選択してください , class: "movie-group-form__choice"
-            = f.submit "投稿する", class: "btn btn-dark"
+      .movie-group-form__field.clearfix
+        .movie-group-form__field--left
+          = f.label :コメント入力, class: "movie-group-form__label"
+        .movie-group-form__field--right
+          = f.text_area :text, class: "movie-group-form__input-comment", id: "new_message", placeholder: "コメントを入力して下さい。"
+          .movie-group-form__field--right--mask
+            = f.label :image, for: "upload-image", class: "movie-group-form__movie" do
+              = fa_icon "cloud-upload fa-spin", class: "icon"
+              = f.file_field :image, class: "hidden", id: "upload-image"
+              = f.label :動画を選択してください , class: "movie-group-form__choice"
+          = f.submit "投稿する", class: "btn btn-dark"
