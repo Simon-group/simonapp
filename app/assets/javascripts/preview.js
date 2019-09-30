@@ -12,9 +12,10 @@ $(document).on('turbolinks:load', function() {
           $preview.empty();
           $preview.append($('<video>').attr({
             src: e.target.result,
-            width: "50%",
+            width: "45%",
             height: "110px",
             class: "preview-image",
+            autoplay: "autoplay",
             title: file.name
           }));
         };
