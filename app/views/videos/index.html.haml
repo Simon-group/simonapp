@@ -1,6 +1,5 @@
-%html.haikeiimage
-  %body.posthaikei
-    .contenter
-      = render partial: "video"
-    .paginate
-      = paginate @videos
+%body.haikeiimage.posthaikei
+  .contenter
+    = render partial: "video"
+  .paginate
+    = paginate @videos
