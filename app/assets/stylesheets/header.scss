@@ -36,7 +36,7 @@
 }
 
 .search{
-  margin-right: 37rem;
+  margin-right: 25%;
   .search-title {
     @include colorstyle(white,3rem);
   }
@@ -52,6 +52,6 @@
   }
   .btn {
     position: fixed;
-    margin-left: 29rem;
+    margin-left: 20.5%;
   }
 }
