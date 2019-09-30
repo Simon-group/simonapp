@@ -18,7 +18,7 @@
   .message
     .message-field
       - if current_user
-        = form_tag("/videos/#{@video.id}/comments", method: :post, id: "new_comment") do
+        = form_with url: "/videos/#{@video.id}/comments", method: :post, id: "new_comment" do
           %h4.message-field__title *************************コメント入力欄*************************
           %textarea{name: "text", cols: "30", rows:"2", placeholder: "コメントを入力して下さい。(30文字以内)", class: "message-field__area",maxlength: "30"}
           %input{type: "submit", value: "投稿する", class: "btn btn-default"}
