@@ -92,3 +92,10 @@
   @include colorstyle(white,5rem);
   background-color: black;
 }
+
+// スマホ時に機能を非表示にする。
+@media screen and (max-width: 460px){
+  .search {
+    display: none;
+  }
+}
