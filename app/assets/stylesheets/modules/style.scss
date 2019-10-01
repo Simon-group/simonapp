@@ -93,9 +93,12 @@
   background-color: black;
 }
 
-// スマホ時に機能を非表示にする。
-@media screen and (max-width: 460px){
+// スマホ時に機能や文字を非表示にする。
+@media (max-width: 460px){
   .search {
+    display: none;
+  }
+  .mypage {
     display: none;
   }
 }
