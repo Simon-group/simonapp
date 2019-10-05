@@ -16,6 +16,7 @@ $(document).on('turbolinks:load', function() {
             height: "110px",
             class: "preview-image",
             autoplay: "autoplay",
+            loop: "loop",
             title: file.name
           }));
         };

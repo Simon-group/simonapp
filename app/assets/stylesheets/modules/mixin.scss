@@ -30,7 +30,6 @@
 
 // タイトル入力フォーム
 @mixin videotitle {
-  @include colorstyle(black,3rem);
   float: left;
   width: 80%;
   line-height: 20px;
@@ -40,7 +39,6 @@
 
 // コメント入力フォーム
 @mixin videocomment {
-  @include colorstyle(black,3rem);
   float: left;
   width: 80%;
   line-height: 20px;
