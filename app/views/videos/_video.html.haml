@@ -8,7 +8,7 @@
     = simple_format(video.text, class: "comment-text")
     %h3.iinestyle いいね件数: #{video.likes.count}
     .videostyle
-      = video_tag video.image.to_s, autoplay: true, muted: true, loop: true, width: "50%"
+      = video_tag video.image.to_s, autoplay: true, muted: true, loop: true, playsinline: true, width: "50%"
     .btnstyle
       .btnstyle__syosai
         = link_to "詳細", "/videos/#{video.id}", method: :get, class: "btn btn-default btn-block"
