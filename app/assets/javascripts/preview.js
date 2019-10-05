@@ -17,6 +17,8 @@ $(document).on('turbolinks:load', function() {
             class: "preview-image",
             autoplay: "autoplay",
             loop: "loop",
+            muted: "true",
+            playsinline: "true",
             title: file.name
           }));
         };
