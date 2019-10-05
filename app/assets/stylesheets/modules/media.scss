@@ -24,7 +24,7 @@
   .movie-group-form__input-comment {
     @include colorstyle(black,1.3rem);
   }
-  .btn-dark{
+  .movie-group .btn{
     @include colorstyle(black,2rem);
   }
 }
@@ -50,7 +50,7 @@
   .movie-group-form__input-comment {
     @include colorstyle(black,3rem);
   }
-  .btn-dark {
+  .movie-group .btn {
     @include colorstyle(black,3rem);
   }
 }
